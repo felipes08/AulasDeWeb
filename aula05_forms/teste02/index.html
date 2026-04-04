@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 1 - Formulário</title>
+    <style>
+        /* Define a fonte padrão igual a do slide */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        /* Estrutura para alinhar os campos lado a lado */
+        .linha {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        /* Fixa a largura dos rótulos (labels) da esquerda para alinhar tudo */
+        .rotulo-principal {
+            width: 100px;
+            font-weight: normal;
+        }
+
+        /* Ajustes específicos para as opções de rádio (Sexo) ficarem uma embaixo da outra */
+        .grupo-radio {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Ajustes de tamanho para os campos de entrada */
+        input[type="text"] {
+            width: 250px;
+        }
+
+        textarea {
+            width: 300px;
+            height: 60px;
+            resize: vertical; /* Permite que o usuário aumente a caixa apenas para baixo */
+        }
+
+        /* Estilizando os botões para ficarem parecidos com os antigos do Windows */
+        .botoes {
+            margin-left: 100px; /* Empurra os botões para alinharem com os campos */
+        }
+
+        button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="POST">
+        
+        <div class="linha">
+            <label class="rotulo-principal" for="nome">Nome</label>
+            <input type="text" id="nome" name="nome">
+        </div>
+
+        <div class="linha">
+            <label class="rotulo-principal">Sexo</label>
+            <div class="grupo-radio">
+                <label><input type="radio" name="sexo" value="masculino"> Masculino</label>
+                <label><input type="radio" name="sexo" value="feminino"> Feminino</label>
+            </div>
+        </div>
+
+        <div class="linha">
+            <label class="rotulo-principal" for="profissao">Profissão</label>
+            <select id="profissao" name="profissao">
+                <option value="estudante">Estudante</option>
+                <option value="professor">Professor</option>
+                <option value="engenheiro">Engenheiro</option>
+                <option value="economista">Economista</option>
+                <option value="medico">Médico</option>
+                </select>
+        </div>
+
+        <div class="linha">
+            <label class="rotulo-principal" for="comentarios">Comentários</label>
+            <textarea id="comentarios" name="comentarios" placeholder="Digite aqui suas observações"></textarea>
+        </div>
+
+        <div class="botoes">
+            <button type="submit">Envia</button>
+            <button type="reset">Limpa</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

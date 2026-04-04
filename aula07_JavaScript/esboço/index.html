@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Split & Tip</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; max-width: 300px; }
+        .campo { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input, select { width: 100%; padding: 8px; box-sizing: border-box; }
+        .resultado { font-weight: bold; color: #2c3e50; margin-top: 20px; }
+        .erro { color: red; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+    <h2>Split & Tip 🍽️</h2>
+    
+    <form id="meuForm">
+        <div class="campo">
+            <label>Valor Total da Conta (R$)</label>
+            <input type="number" name="totalConta" step="0.01" placeholder="Ex: 100.00">
+        </div>
+
+        <div class="campo">
+            <label>Qualidade do Serviço</label>
+            <select name="servico">
+                <option value="0.20">Excelente (20%)</option>
+                <option value="0.15">Bom (15%)</option>
+                <option value="0.10">Regular (10%)</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label>Número de Pessoas</label>
+            <input type="number" name="qtdPessoas" min="1" value="1">
+            <span id="msgErro" class="erro"></span>
+        </div>
+    </form>
+
+    <div class="resultado">
+        <p>Total por Pessoa: <span id="valorPessoa">R$ 0,00</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

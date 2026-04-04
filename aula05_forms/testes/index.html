@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscrição - Campeonato Sim Racing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container-formulario">
+        <h2>Inscrição de Piloto</h2>
+        
+        <form action="#" method="POST">
+            
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <div class="campo">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome nas pistas" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail de Contato:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Equipamento e Preferências</legend>
+
+                <div class="campo">
+                    <label>Tipo de Volante (Opção Única):</label>
+                    <input type="radio" id="dd" name="volante" value="dd" checked>
+                    <label for="dd" class="radio-label">Direct Drive</label>
+
+                    <input type="radio" id="engrenagem" name="volante" value="engrenagem">
+                    <label for="engrenagem" class="radio-label">Correia/Engrenagem</label>
+                </div>
+
+                <div class="campo">
+                    <label for="simulador">Simulador Principal:</label>
+                    <select id="simulador" name="simulador">
+                        <option value="iracing">iRacing</option>
+                        <option value="acc">Assetto Corsa Competizione</option>
+                        <option value="f1">F1 2024</option>
+                        <option value="ams2">Automobilista 2</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="obs">Experiência Prévia:</label>
+                    <textarea id="obs" name="obs" rows="3" placeholder="Conte um pouco sobre sua experiência em ligas..."></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="botao">Confirmar Inscrição</button>
+        </form>
+    </div>
+
+</body>
+</html>

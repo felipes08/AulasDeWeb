@@ -1,0 +1,23 @@
+table, th, td{
+    border: solid;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even){
+    background-color: #8d8d8d91;
+}
+
+th, td{
+    text-align: center;
+}
+
+img{
+    display: block;
+    margin: auto;
+    width: 48px;
+    height: 48px;
+}
+
+.branco{
+    background-color: white;
+}

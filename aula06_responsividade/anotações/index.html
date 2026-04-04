@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Simples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Checkout</h1>
+    
+    <form>
+        <div class="layout-desktop">
+            
+            <fieldset>
+                <legend>Identificação</legend>
+                <label>Nome Completo: <input type="text" required></label>
+                <label>E-mail: <input type="email" required></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Entrega</legend>
+                <div class="layout-tablet">
+                    <label class="metade">Endereço: <input type="text" required></label>
+                    <label class="metade">Cidade: <input type="text" required></label>
+                </div>
+                <label>Estado: 
+                    <select required>
+                        <option value="">Selecione...</option>
+                        <option value="SP">SP</option>
+                        <option value="RJ">RJ</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Pagamento e Segurança</legend>
+                <label><input type="radio" name="pagamento" value="cartao" required> Cartão</label>
+                <label><input type="radio" name="pagamento" value="pix" required> Pix</label>
+                
+                <label style="margin-top: 15px;">Código CVV: 
+                    <input type="number" max="999" required placeholder="Ex: 123">
+                </label>
+            </fieldset>
+
+        </div>
+
+        <button type="submit">Finalizar Compra</button>
+    </form>
+</body>
+</html>

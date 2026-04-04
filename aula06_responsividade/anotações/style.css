@@ -1,0 +1,53 @@
+/* =========================================
+   MOBILE-FIRST (Padrão) - 1 Coluna
+   ========================================= */
+* { box-sizing: border-box; font-family: sans-serif; }
+body { padding: 20px; }
+
+fieldset { margin-bottom: 20px; padding: 15px; }
+label { display: block; margin-bottom: 10px; }
+
+/* Todos os campos de texto ocupam 100% da tela no celular */
+input[type="text"], input[type="email"], input[type="number"], select {
+    width: 100%; 
+    padding: 8px; 
+    margin-top: 4px; /* Espaço entre o texto do label e a caixinha */
+}
+
+button {
+    width: 100%; 
+    padding: 15px; 
+    background-color: #0056b3; 
+    color: white; 
+    border: none; 
+    font-size: 16px;
+}
+
+/* =========================================
+   TABLET (Telas maiores que 600px)
+   ========================================= */
+@media (min-width: 600px) {
+    /* Desafio: Endereço e Cidade em 2 colunas */
+    .layout-tablet { 
+        display: flex; 
+        gap: 10px; 
+    }
+    .layout-tablet .metade { 
+        flex: 1; /* Faz as duas caixas dividirem o espaço igualmente */
+    }
+}
+
+/* =========================================
+   DESKTOP (Telas maiores que 1024px)
+   ========================================= */
+@media (min-width: 1024px) {
+    /* Desafio: Layout profissional em 3 colunas */
+    .layout-desktop { 
+        display: flex; 
+        gap: 20px; 
+    }
+    fieldset { 
+        flex: 1; /* Faz os 3 blocos terem a mesma largura */
+        margin-bottom: 0; 
+    }
+}

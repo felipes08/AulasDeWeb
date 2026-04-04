@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SPLIT & TIP</title>
+</head>
+<body>
+
+
+    <h2>Split & Tip</h2>
+    <form name="meuForm">
+        <div>
+            <label for="totalConta">Valor Total da Conta (R$)
+                <input type="number" name="totalConta" id="totalConta" placeholder="Ex= 100,00">
+            </label>
+        </div>
+
+        <div>
+            <label for="servico">Qualidade do Serviço
+                <select name="servico" id="servico">
+                    <option value="0.20">Excelente (20%)</option> 
+                    <option value="0.15">Bom (15%)</option> 
+                    <option value="0.10">Regular (10%)</option> 
+                </select>
+            </label>
+        </div>
+
+        <div>
+            <label for="qtdPessoas">Número de Pessoas
+                <input type="number" name="qtdPessoas" id="qtdPessoas" min="1" value="1">
+            </label>
+        </div>
+
+        <div>
+            <label for="total">Total por Pessoa:
+                <input type="text" id="total" name="total" disabled >
+            </label>
+        </div>
+
+    </form>
+
+    <script src="calculo.js"></script>
+    
+</body>
+</html>

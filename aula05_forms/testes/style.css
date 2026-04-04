@@ -1,0 +1,93 @@
+/* Estilos gerais para a página de fundo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c3e50;
+    padding: 20px;
+}
+
+/* Caixa branca onde o formulário fica dentro */
+.container-formulario {
+    background-color: #ffffff;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Formatando os grupos de dados [cite: 171] */
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+legend {
+    font-weight: bold;
+    color: #e67e22; /* Laranja para dar um toque "Racing" */
+    padding: 0 8px;
+}
+
+/* Espaçamento entre os campos */
+.campo {
+    margin-bottom: 15px;
+}
+
+/* Labels padrão (ficam em cima do campo) [cite: 253, 256] */
+.campo label {
+    display: block; 
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Labels dos botões Radio (ficam ao lado da bolinha) */
+.campo label.radio-label {
+    display: inline;
+    font-weight: normal;
+    margin-right: 15px;
+}
+
+/* Estilizando as caixas de texto e seleção [cite: 269, 272] */
+.campo input[type="text"],
+.campo input[type="email"],
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Impede que o padding quebre a largura total */
+}
+
+/* O famoso EFEITO FOCUS do slide [cite: 236, 237, 246] */
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    background-color: #FFC; /* Fundo amarelo clarinho */
+    outline: none; /* Tira a borda azul padrão do navegador */
+    border: 1px solid #e67e22;
+}
+
+/* Estilo do Botão [cite: 285, 287] */
+.botao {
+    font-size: 1.2em;
+    background-color: #e67e22;
+    color: #FFF;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer; /* Muda a setinha do mouse para mãozinha [cite: 316] */
+    width: 100%;
+}
+
+/* Efeito ao passar o mouse por cima do botão [cite: 304, 306] */
+.botao:hover {
+    background-color: #d35400;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscrição - DevCon 2024</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Portal DevCon 2024</h2>
+    
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Dados de Inscrição</legend>
+
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento" required>
+
+            <label for="ingressos">Quantidade de Ingressos (1 a 5):</label>
+            <input type="number" id="ingressos" name="ingressos" min="1" max="5" required>
+
+            <label for="foto">Foto para o Crachá:</label>
+            <input type="file" id="foto" name="foto" required>
+
+            <label for="cor">Cor da Camiseta:</label>
+            <input type="color" id="cor" name="cor">
+
+            <label for="obs">Observações Médicas ou Alimentares:</label>
+            <textarea id="obs" name="obs" rows="3"></textarea>
+
+            <button type="submit">Confirmar Inscrição</button>
+
+    </form>
+
+</body>
+</html>

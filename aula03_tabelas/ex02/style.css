@@ -1,0 +1,23 @@
+td{
+    text-align: center;
+}
+table, td{
+    border: solid;
+    border-collapse: collapse;
+}
+th, h2{
+    background-color: #008000;
+    color: white;
+    text-align: center;
+    
+}
+
+th{
+    border: solid black;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
