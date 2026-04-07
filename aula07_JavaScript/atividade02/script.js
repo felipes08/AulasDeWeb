@@ -4,11 +4,21 @@ const total = document.getElementById("valorTotal")
 meuForm.oninput = function(){
     const valorBasePorPessoa = 80;
     let qntDePesoas = parseInt(meuForm.elements["qtdConvidados"].value);
+    let subtotal = qntDePesoas * valorBasePorPessoa;
+    let adicionaisSoma = 0;
 
-    total.textContent = qntDePesoas.toLocaleString('pt-BR', {
-        style: 'currency',
-        currency: 'BRL'
+    const listaAdicionais = meuForm.elements['adicionais'];
+
+    listaAdicionais.forEach(checkbox => {
+        if (checkbox.checked){
+            let valorExtra = parseFloat(checkbox.value)
+        }
+        
     });
+
+    total.textContent = "R$" + qntDePesoas.toFixed(2);
+
+
 }
 /*
 // 1. Declarar as referências corretamente
