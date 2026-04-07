@@ -1,49 +1,32 @@
+const meuForm = document.forms["meuForm"];
+const total = document.getElementById("valorTotal")
 
-
-/*
-const meuForm = document.forms['meuForm'];
-const displayTotal = document.getElementById('valorTotal');
-const avisoTaxa = document.getElementById('avisoTaxa');
-
-meuForm.oninput = function() {
-    // 1. Valores Iniciais
+meuForm.oninput = function(){
     const valorBasePorPessoa = 80;
-    let qtd = parseInt(meuForm.elements['qtdConvidados'].value) || 0;
-    let subtotal = qtd * valorBasePorPessoa;
-    let adicionaisSoma = 0;
+    let qntDePesoas = parseInt(meuForm.elements["qtdConvidados"].value);
 
-    // 2. Loop nos Checkboxes (Iteração de Coleção)
-    // meuForm.elements['adicionais'] retorna uma lista de todos os checkboxes
-    const listaAdicionais = meuForm.elements['adicionais'];
-
-    listaAdicionais.forEach(checkbox => {
-        if (checkbox.checked) {
-            let valorExtra = parseFloat(checkbox.value);
-            
-            // Regra especial: Open Bar é por pessoa (usamos um data-attribute para identificar)
-            if (checkbox.dataset.perPerson) {
-                adicionaisSoma += valorExtra * qtd;
-            } else {
-                adicionaisSoma += valorExtra;
-            }
-        }
-    });
-
-    // 3. Soma Parcial
-    let totalFinal = subtotal + adicionaisSoma;
-
-    // 4. Regra de Negócio: Mínimo Garantido (< 50 convidados)
-    if (qtd > 0 && qtd < 50) {
-        totalFinal *= 1.15; // Aplica 15% de acréscimo
-        avisoTaxa.textContent = "* Taxa de conveniência de 15% aplicada (menos de 50 pessoas).";
-    } else {
-        avisoTaxa.textContent = "";
-    }
-
-    // 5. Saída formatada
-    displayTotal.textContent = totalFinal.toLocaleString('pt-BR', {
+    total.textContent = qntDePesoas.toLocaleString('pt-BR', {
         style: 'currency',
         currency: 'BRL'
     });
-};
-*/
+}
+/*
+// 1. Declarar as referências corretamente
+const meuForm = document.forms['meuForm'];
+const displayTotal = document.getElementById('valorTotal'); // Fora do form, usa-se getElementById
+
+meuForm.oninput = function() {
+    const valorBasePorPessoa = 80;
+    
+    // 2. Pegar o VALOR e converter para número
+    let qtd = parseInt(meuForm.elements["qtdConvidados"].value) || 0;
+
+    // 3. Calcular (exemplo simples apenas com a quantidade)
+    let total = qtd * valorBasePorPessoa;
+
+    // 4. Atualizar o elemento correto com a formatação
+    displayTotal.textContent = total.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    });
+};*/

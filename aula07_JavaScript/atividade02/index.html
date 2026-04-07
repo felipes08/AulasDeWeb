@@ -4,27 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Buffet Pro</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Simulador de Buffet Pro</h2>
-    <form>
+    <h2>Simulador de Buffet 🥂</h2>
+    <form name="meuForm">
         <div>
-            <label for="pessoas">Quantidade de Pessoas
-                <input type="number" name="pessoas" id="pessoas" placeholder="Seu Nome">
-            </label>
+            <label>Quantidade de Convidados</label>
+            <input type="number" name="qtdConvidados" min="1" value="50">
         </div>
 
         <div>
-            <label><input type="checkbox" name="adicionais" id="adicionais" value="500">Decoração (R$500,00)</label> 
-            <label><input type="checkbox" name="adicionais" id="adicionais" value="800">DJ Profissional (R$800,00)</label>
-            <label><input type="checkbox" name="adicionais" id="adicionais" value="30">Open Bar (R$30,00/pessoa)</label>
+            <label>Serviços Adicionais:</label>
+            <label><input type="checkbox" name="adicionais" value="500"> Decoração (R$ 500,00)</label>
+            <label><input type="checkbox" name="adicionais" value="800"> DJ Profissional (R$ 800,00)</label>
+            <label><input type="checkbox" name="adicionais" value="30" data-per-person="true"> Open Bar (R$ 30,00/pessoa)</label>
         </div>
-
-        <div>
-            <p>Orçamento<span id="orcamento">R$ 0,00</span></p>
-        </div>
-        
     </form>
+
+    <div>
+        <p>Orçamento Estimado: </p>
+        <span id="valorTotal">R$ 0,00</span>
+        <small id="avisoTaxa"></small>
+    </div>
     
+
+    <script src="script.js"></script>
 </body>
 </html>
